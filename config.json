@@ -1,5 +1,6 @@
 {
   "ahead": 21,
-  "onStartup": false,
+  "newsAlwaysFirst": false,
   "shortcut": "Shift+B"
+  "onStartup": false,
 }

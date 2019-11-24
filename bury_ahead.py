@@ -62,6 +62,7 @@ from aqt.utils import askUser
 userOptions = mw.addonManager.getConfig(__name__)
 ahead=userOptions["ahead"]
 shortcut=userOptions["shortcut"]
+newsAlwaysFirst=userOptions["newsAlwaysFirst"]
 
 def _newCardTime(self):
 	"modified from the original to IGNORE the option to put new cards last."
@@ -71,7 +72,8 @@ def _newCardTime(self):
 		return self.reps and self.reps % self.newCardModulus == 0
 	else:
 		return True
-anki.sched.Scheduler._timeForNewCard = _newCardTime
+if newsAlwaysFirst:
+	anki.sched.Scheduler._timeForNewCard = _newCardTime
 	
 	
 # having trouble with the 1000 limit in sqlite/pysql (if a huge list of cards needs to be buried)
