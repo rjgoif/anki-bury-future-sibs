@@ -15,6 +15,9 @@ If only the new card had been buried until *after* the old card was reviewed (an
 
 This is ported from a personal (unreleased) Anki 2.0 add-on. Damien is dropping support for Anki 2.0 as of Jan 1, 2020. My hand is forced.
 
+# Additional behavior
+This 
+
 # Compatibility
 Anki 2.1.15 tested. 
 I suspect that this should work with the updated v2 experimental scheduler, but I have not tested this yet. If you are feeling brave, feel free to do so and report back to me.
@@ -23,8 +26,11 @@ Legacy version for Anki 2.0 is included here if you want to manually download an
 # Default config values
 These can be changed in the config file:
 - ahead: how many days ahead do you want to look? Default 21. Anki natively sets this to 0. You can go negative if for some reason you want to only consider overdue cards.
-- onStartup: future functionality, too bug-ridden for the initial release. Eventually will allow you to have the add-on run automatically when you first open Anki each day.
+- newsAlwaysFirst
+If true, the new cards will always be displayed first. Why not just set your real Anki settings to do this? Because sometimes I have to do reviews on iOS/web where thre are no add-ons. If this is the case, I want my new cards last so the siblings will at least be buried after I review any due cards. That way my new cards won't tip me off to my review card answers. Thus I have my deck set to "new cards last" but this add-on can override that when you can *prospectively * bury the new cards. Default is false because I doubt most users need this nuanced behavior.
 - shortcut: keyboard shortcut if you don't want to use the menu option (which appears under Tools). 
+- onStartup: future functionality, too bug-ridden for the initial release. Eventually will allow you to have the add-on run automatically when you first open Anki each day.
+
 
 # Changelog:
 - v2.1.001 initial port from my personal (unreleased) Anki 2.0 add-on. onStartup disabled. 
