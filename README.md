@@ -16,7 +16,7 @@ If only the new card had been buried until *after* the old card was reviewed (an
 This is ported from a personal (unreleased) Anki 2.0 add-on. Damien is dropping support for Anki 2.0 as of Jan 1, 2020. My hand is forced.
 
 # Additional behavior
-This 
+You can set Anki to always show your new cards first (which of course will only those that remained unburied from the prospective bury process). This is nice if you want to get a head start on your new cards for the day while knowing that they won't "preview" any info from your due cards. This is disabled by default, but I originally had it hard coded into the add-on so I preserved the option for my own use and for anyone else who likes it.
 
 # Compatibility
 Anki 2.1.15 tested. 
