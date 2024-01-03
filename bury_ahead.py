@@ -49,7 +49,7 @@ import anki
 import aqt
 import aqt.preferences
 import aqt.deckconf
-import anki.sched
+from anki.scheduler import v3
 import time
 from aqt.utils import showInfo, tooltip
 from anki.utils import ids2str, intTime, fmtTimeSpan
