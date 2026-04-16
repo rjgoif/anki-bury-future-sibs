@@ -1,3 +1,6 @@
+# status
+This repo has not been maintained in years as I do not use Anki regularly anymore. Should have been archived years ago. 
+
 # anki-bury-future-sibs
 > anki 2.1 add-on: buries new card siblings of any cards due in the next N days
 
