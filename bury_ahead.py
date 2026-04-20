@@ -90,11 +90,11 @@ def buryNewSibsMenu():
 	mw.col.save()
 	today = int((time.time() - mw.col.crt) // 86400)
 	cutoff = today+ahead
-	dids = mw.col.decks.allIds()
+	dids = mw.col.decks.all_ids()
 	didsRevuBury = [0]
 	didsNewBury = [0]
 	for did in dids:
-		conf = mw.col.decks.confForDid(did)
+		conf = mw.col.decks.config_dict_for_deck_id(did)
 		if not conf["dyn"]:
 			if conf["rev"]["bury"]:
 				didsRevuBury.append(did)
@@ -124,7 +124,6 @@ def buryNewSibsMenu():
 			mw.col.db.execute(
 				"update cards set queue=-2,mod=?,usn=? where id in "+ids2str(cidsToBury),
 				intTime(), mw.col.usn())
-			mw.col.log(cidsToBury)
 	tooltip("Siblings buried prospectively, out "+str(ahead)+" days")
 
 
